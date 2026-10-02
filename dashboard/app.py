@@ -8,6 +8,11 @@ from dotenv import load_dotenv
 # Load environment variables for local development
 load_dotenv()
 
+# Fix for Streamlit Cloud module resolution
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from dashboard.db import get_db_connection
 from dashboard.queries import (
     get_kpi_metrics, get_risk_distribution, get_transaction_activity_over_time,
