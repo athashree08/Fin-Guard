@@ -1,133 +1,324 @@
+```markdown
 # FinGuard — Real-Time Payment Risk & Fraud Detection Pipeline
 
-FinGuard is a robust, real-time data engineering pipeline designed to monitor financial transactions and detect fraudulent activity on the fly. It leverages Apache Kafka and PySpark Structured Streaming to process high-velocity payment events, apply rule-based risk scoring, and persist enriched results into a cloud PostgreSQL database for live dashboard monitoring.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?style=for-the-badge)](https://athashrees-fin-guard.streamlit.app/)
 
-[Live Demo](https://athashrees-fin-guard.streamlit.app/)
+> My first project exploring Apache Kafka and PySpark Structured Streaming — built to understand how real-time transaction data moves through a data engineering pipeline.
 
-## Overview
+**[Live Demo](https://athashrees-fin-guard.streamlit.app/)**
 
-Modern payment systems require ultra-low latency detection of anomalous behavior. FinGuard ingests a continuous stream of transactions and performs instantaneous stream-static joins against customer and merchant reference data. 
+---
 
-Rather than a black-box machine learning model, FinGuard relies on a transparent, **rule-based risk engine** to calculate anomaly scores based on transaction velocity, amount ratios, geolocation mismatches, and entity blacklisting. The processed alerts are written to a cloud-hosted Neon PostgreSQL database, where a Streamlit operational dashboard allows analysts to investigate flagged transactions in real-time.
+## About the Project
+
+FinGuard is an **exploration and learning project** where I built a real-time payment risk monitoring pipeline from scratch.
+
+This was my **first time working with Kafka and PySpark**, so the main goal was not to build a production-ready fraud detection system, but to understand how streaming systems work in practice.
+
+I wanted to explore:
+
+- How Kafka handles continuous events
+- How PySpark consumes and processes streams
+- How streaming data can be joined with reference data
+- How window-based processing works
+- How processed data can be stored in PostgreSQL
+- How a dashboard can be built on top of a streaming pipeline
+
+The project generates simulated payment transactions, processes them through Kafka and PySpark, applies an explainable rule-based risk engine, and stores the results in PostgreSQL for dashboard monitoring.
+
+---
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    subgraph Local Pipeline
-        A(Transaction Generator) -->|JSON Events| B(Apache Kafka)
-        B -->|Stream| C(PySpark Structured Streaming)
-        C -->|Validate & Join| D(Customer/Merchant Enrichment)
-        D -->|Feature Eng.| E(Risk Engine & Velocity)
-    end
-    
-    subgraph Cloud Infrastructure
-        E -->|JDBC Append| F[(Neon PostgreSQL)]
-        F <-->|SQL Queries| G(Streamlit Dashboard)
-    end
+    A[Transaction Generator] --> B[Apache Kafka]
+    B --> C[PySpark Structured Streaming]
+    C --> D[Validation]
+    D --> E[Customer & Merchant Enrichment]
+    E --> F[Risk Engine + Velocity Analysis]
+    F --> G[(Neon PostgreSQL)]
+    G --> H[Streamlit Dashboard]
 ```
 
-## Key Features
+### Current Setup
 
-- **Kafka-based transaction streaming**: Ingestion of raw payment events.
-- **PySpark Structured Streaming**: Micro-batch processing of the Kafka topic.
-- **Data validation**: Enforcing strict schema and field requirements.
-- **Stream-static joins**: Enriching the stream with historical customer and merchant data.
-- **Amount anomaly detection**: Comparing transaction values against historical averages.
-- **Merchant risk detection**: Flagging known high/medium risk vendors.
-- **Blacklist detection**: Immediate escalation for blacklisted entities.
-- **Location mismatch detection**: Identifying when transaction locations differ from customer residency.
-- **Transaction velocity analysis**: Aggregating 1-minute window transaction counts per customer.
-- **Explainable risk scoring**: A fully transparent additive scoring system.
-- **PostgreSQL persistence**: Storing final, enriched records for downstream analysis.
-- **Transaction investigation**: Deep-dive operational UI for analysts to review flags.
-- **Customer & Merchant analytics**: Aggregated behavioral metrics.
-- **Streamlit dashboard**: A live, auto-refreshing public operations terminal.
+```text
+LOCAL
+Transaction Generator
+        ↓
+Kafka
+        ↓
+PySpark
+        ↓
+Risk Processing
+        ↓
+        ↓
+CLOUD
+Neon PostgreSQL
+        ↓
+Streamlit Cloud
+        ↓
+Public Dashboard
+```
 
-## Risk Scoring
+---
 
-FinGuard utilizes a transparent, rule-based risk scoring engine. It calculates a `base_risk_score` and a `velocity_risk` to arrive at a `final_risk_score`.
+## What I Built
 
-**Scoring Factors:**
-- **Blacklisted merchant**: +50
-- **Merchant risk (HIGH)**: +30
-- **Merchant risk (MEDIUM)**: +15
-- **Amount ratio ≥ 5x (Anomaly)**: +20
-- **Amount ratio ≥ 3x (Anomaly)**: +10
-- **Location mismatch**: +10
+- Kafka-based transaction streaming
+- PySpark Structured Streaming pipeline
+- Transaction validation
+- Stream-static joins with customer and merchant data
+- Amount anomaly detection
+- Merchant risk and blacklist checks
+- Location mismatch detection
+- 1-minute transaction velocity analysis
+- Explainable rule-based risk scoring
+- PostgreSQL persistence
+- Customer and merchant analytics
+- Streamlit investigation dashboard
 
-**Velocity Risk (Rolling 1-minute window):**
-- **≥ 5 transactions/min**: +20
-- **≥ 3 transactions/min**: +10
+---
 
-**Final Classification (`final_risk_level`):**
-- **HIGH**: Score ≥ 60
-- **MEDIUM**: Score ≥ 30
-- **LOW**: Score < 30
+## Risk Engine
 
-*(Note: This is an explicitly rule-based operational engine, not a trained ML model.)*
+Instead of using a Machine Learning model, I implemented a simple **rule-based risk engine** so that every decision could be explained.
 
-## Data Flow
+| Risk Signal | Score |
+|---|---:|
+| Blacklisted merchant | +50 |
+| HIGH merchant risk | +30 |
+| MEDIUM merchant risk | +15 |
+| Amount ratio ≥ 5x | +20 |
+| Amount ratio ≥ 3x | +10 |
+| Location mismatch | +10 |
+| ≥ 5 transactions/min | +20 |
+| ≥ 3 transactions/min | +10 |
 
-1. The `transaction_generator.py` script continuously creates and serializes JSON transaction events.
-2. Apache Kafka publishes these events to the local `payment_transactions` topic.
-3. PySpark consumes the streaming data, casting JSON into a typed schema.
-4. Transactions are strictly validated (null checks, enum checks, positive amounts).
-5. Customer and merchant reference CSV datasets are joined into the micro-batch stream.
-6. Risk features (such as `amount_ratio`) are engineered on the fly.
-7. A time-window aggregation evaluates the current transaction velocity for each customer.
-8. The final risk score and level are calculated based on the combined factors.
-9. Results are appended to the `transactions` table in the Neon PostgreSQL cloud database via JDBC.
-10. The deployed Streamlit dashboard queries PostgreSQL to provide an interactive investigation interface.
+Final classification:
+
+```text
+0 – 29   → LOW
+30 – 59  → MEDIUM
+60+      → HIGH
+```
+
+---
 
 ## Dashboard
 
-The Streamlit operational dashboard is divided into four main sections:
+The Streamlit dashboard provides:
 
-### Overview
-Displays core KPIs (Total Transactions, High Risk count, Total Value, Average Value). Features interactive Plotly charts showing the exact Risk Distribution and Transactions per Minute. Showcases a quick-access feed of recently flagged HIGH risk transactions.
+**Overview**
+- Transaction KPIs
+- Risk distribution
+- Transaction activity
+- Recent high-risk transactions
 
-### Transactions
-A detailed transaction explorer allowing analysts to filter by Risk Level, Transaction Type, and search by ID. Includes a **Transaction Investigation** module that completely breaks down the exact mathematical factors contributing to a specific transaction's risk score.
+**Transactions**
+- Search and filtering
+- Transaction investigation
+- Risk-factor breakdown
 
-### Customers
-Aggregated analytics showcasing total volume, average transaction size, and high-risk flags associated with specific customer segments.
+**Customers**
+- Transaction volume
+- Average transaction value
+- High-risk activity
 
-### Merchants
-Aggregated analytics breaking down risk exposure by merchant category and identifying heavily blacklisted entities.
+**Merchants**
+- Merchant risk
+- Blacklist status
+- Transaction volume
+- High-risk transactions
+
+---
+
+## Things I Learned
+
+This project was mainly about learning by building.
+
+### Kafka ≠ Database
+
+Kafka acts as the **event streaming layer**, while PostgreSQL is used for persistent storage.
+
+### Stream-Static Joins
+
+I learned how a live transaction stream can be enriched using relatively static customer and merchant reference data.
+
+### Window Processing
+
+I explored event-time windows and transaction velocity to identify unusually frequent activity.
+
+### Explainable Risk Scoring
+
+Building the risk engine with rules made it possible to understand exactly why a transaction received a particular score.
+
+### Streaming Is Different From Pandas
+
+Working with PySpark introduced concepts I hadn't dealt with in normal data analysis:
+
+- Micro-batches
+- Watermarks
+- Event time
+- Windows
+- Streaming joins
+- JDBC sinks
+
+---
+
+## Problems I Ran Into
+
+This project also involved quite a bit of debugging.
+
+| Problem | What I Learned / Changed |
+|---|---|
+| Kafka setup on Windows | Learned Kafka configuration and local broker setup |
+| Spark + Kafka integration | Learned connector/version compatibility |
+| Windows Hadoop/Spark errors | Configured the required Hadoop Windows environment |
+| Ambiguous columns after joins | Used aliases and explicit column selection |
+| Stream-stream velocity join | Switched to `foreachBatch` after exploring the limitations |
+| Duplicate transaction IDs | Replaced random IDs with UUID-based IDs |
+| Local PostgreSQL deployment | Moved the database to Neon for public access |
+
+One particularly useful bug was the duplicate transaction ID issue.
+
+I initially generated IDs using random 6-digit numbers. Eventually, two transactions received the same ID and PostgreSQL rejected the insert because of the primary-key constraint.
+
+I changed the generator to UUID-based IDs:
+
+```python
+import uuid
+
+transaction_id = f"TXN_{uuid.uuid4().hex[:16]}"
+```
+
+That was a small bug, but it taught me an important lesson about designing identifiers for uniqueness in data pipelines.
+
+---
+
+## Why This Architecture?
+
+I considered deploying Kafka, Spark, PostgreSQL, and the dashboard entirely in the cloud.
+
+For an exploration project, that added unnecessary infrastructure and cost.
+
+Instead, I chose a hybrid setup:
+
+**Local**
+- Kafka
+- PySpark
+- Transaction Generator
+
+**Cloud**
+- Neon PostgreSQL
+- Streamlit Community Cloud
+
+This gives me a publicly accessible dashboard while allowing me to experiment with the streaming pipeline locally.
+
+---
 
 ## Tech Stack
 
 | Technology | Purpose |
 |---|---|
-| **Python** | Core programming language for generators and dashboard |
-| **Apache Kafka** | High-throughput distributed message broker for raw events |
-| **PySpark** | Distributed data processing and structured streaming |
-| **PostgreSQL / Neon** | Cloud-native relational database for permanent analytical storage |
-| **Streamlit** | Rapid development of the interactive Python-based web dashboard |
-| **Plotly & Pandas** | Data manipulation and advanced charting |
+| Python | Core development |
+| Apache Kafka | Event streaming |
+| PySpark | Stream processing |
+| PostgreSQL / Neon | Data storage |
+| Streamlit | Dashboard |
+| Pandas | Reference data |
+| Plotly | Visualization |
+
+---
 
 ## Project Structure
 
 ```text
 FinGuard/
 ├── .streamlit/
-│   └── config.toml             # Streamlit Cloud theme settings
 ├── dashboard/
-│   ├── __init__.py             # Module declaration
-│   ├── app.py                  # Main Streamlit dashboard entrypoint
-│   ├── components.py           # Shared UI components and formatting
-│   ├── db.py                   # PostgreSQL connection pooling
-│   ├── queries.py              # Parameterized SQL statements
-│   └── styles.py               # Custom CSS styling
 ├── data/
-│   ├── customers.csv           # Static customer reference data
-│   └── merchants.csv           # Static merchant reference data
-├── .env.example                # Template for database credentials
-├── data_generator.py           # Script to generate static reference CSVs
-├── requirements.txt            # Streamlit Cloud deployment dependencies
-├── spark_kafka_test.py         # Main PySpark streaming pipeline
-├── spark_test.py               # Spark installation validation script
-├── transaction_generator.py    # Continuous Kafka payment event producer
-└── velocity_test.py            # Local velocity logic testing script
+├── data_generator.py
+├── transaction_generator.py
+├── spark_kafka_test.py
+├── spark_test.py
+├── velocity_test.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Current Limitations
+
+This is an **exploration/learning project**, not a production fraud detection platform.
+
+- Kafka and PySpark currently run locally.
+- Transactions are simulated.
+- Risk detection is rule-based.
+- There is no trained fraud ML model.
+- Velocity processing is not yet implemented as a production-grade persistent state system.
+- Production monitoring and alerting are not included.
+
+---
+
+## Future Scope
+
+If I continue developing FinGuard, I would explore:
+
+- Persistent stateful velocity detection
+- ML-based fraud classification
+- Real-time fraud alerts
+- Dockerized deployment
+- Managed Kafka
+- Cloud-based Spark processing
+- Pipeline monitoring and observability
+- Dead-letter queues and retry mechanisms
+
+---
+
+## Key Takeaway
+
+FinGuard started as a simple goal:
+
+> **Learn Kafka and PySpark by actually building something.**
+
+It became an opportunity to understand how different components of a data engineering system fit together:
+
+```text
+Events
+  ↓
+Kafka
+  ↓
+Spark
+  ↓
+Validation
+  ↓
+Enrichment
+  ↓
+Feature Engineering
+  ↓
+Risk Processing
+  ↓
+PostgreSQL
+  ↓
+Dashboard
+```
+
+The most valuable part of the project wasn't just learning two new technologies. It was learning how to **debug, make architectural trade-offs, and connect individual technologies into a working data pipeline.**
+
+---
+
+## Live Demo
+
+**[FinGuard Dashboard](https://athashrees-fin-guard.streamlit.app/)**
+
+---
+
+## Author
+
+**Athashree Badokar**
+
+B.Tech — Data Science
 ```
