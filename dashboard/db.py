@@ -7,11 +7,19 @@ import pandas as pd
 
 @st.cache_resource
 def get_connection_pool():
-    host = os.environ.get("POSTGRES_HOST", "localhost")
-    port = os.environ.get("POSTGRES_PORT", "5432")
-    database = os.environ.get("POSTGRES_DB", "finguard")
-    user = os.environ.get("POSTGRES_USER", "postgres")
-    password = os.environ.get("POSTGRES_PASSWORD", "")
+    # Try Streamlit secrets first (for Cloud), then fallback to environment variables
+    try:
+        host = st.secrets.get("POSTGRES_HOST", os.environ.get("POSTGRES_HOST", "localhost"))
+        port = st.secrets.get("POSTGRES_PORT", os.environ.get("POSTGRES_PORT", "5432"))
+        database = st.secrets.get("POSTGRES_DB", os.environ.get("POSTGRES_DB", "finguard"))
+        user = st.secrets.get("POSTGRES_USER", os.environ.get("POSTGRES_USER", "postgres"))
+        password = st.secrets.get("POSTGRES_PASSWORD", os.environ.get("POSTGRES_PASSWORD", ""))
+    except Exception:
+        host = os.environ.get("POSTGRES_HOST", "localhost")
+        port = os.environ.get("POSTGRES_PORT", "5432")
+        database = os.environ.get("POSTGRES_DB", "finguard")
+        user = os.environ.get("POSTGRES_USER", "postgres")
+        password = os.environ.get("POSTGRES_PASSWORD", "")
     
     try:
         connection_pool = pool.SimpleConnectionPool(
