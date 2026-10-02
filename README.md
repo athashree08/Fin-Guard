@@ -1,4 +1,4 @@
-```markdown
+
 # FinGuard — Real-Time Payment Risk & Fraud Detection Pipeline
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?style=for-the-badge)](https://athashrees-fin-guard.streamlit.app/)
@@ -60,7 +60,7 @@ Neon PostgreSQL
 Streamlit Cloud
         ↓
 Public Dashboard
-```
+
 
 ---
 
