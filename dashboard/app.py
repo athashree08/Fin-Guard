@@ -13,13 +13,13 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from dashboard.db import get_db_connection
+from dashboard.db import get_db_connection, fetch_value
 from dashboard.queries import (
     get_kpi_metrics, get_risk_distribution, get_transaction_activity_over_time,
     get_recent_high_risk_transactions, get_filtered_transactions,
     get_transaction_detail, get_customer_metrics, get_merchant_metrics
 )
-from dashboard.components import kpi_card, risk_badge, render_system_status
+from dashboard.components import kpi_card, risk_badge, render_system_status, format_inr, format_timestamp
 from dashboard.styles import get_styles
 
 # Page configuration
@@ -32,11 +32,6 @@ st.set_page_config(
 
 # Apply styles
 st.markdown(get_styles(), unsafe_allow_html=True)
-
-# Auto-refresh logic placeholder if needed, though for now we rely on a manual button 
-# or st.rerun via button to not overload the DB in a simple way
-def format_inr(value):
-    return f"₹{value:,.2f}"
 
 def main():
     # Sidebar Navigation
@@ -53,12 +48,18 @@ def main():
     
     # Check DB Connection
     pg_connected = False
+    tx_count = None
+    last_updated_ts = None
+    
     with get_db_connection() as conn:
         if conn is not None:
             pg_connected = True
             
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    render_system_status(pg_connected, now)
+    if pg_connected:
+        tx_count = fetch_value("SELECT COUNT(*) FROM transactions")
+        last_updated_ts = fetch_value("SELECT MAX(transaction_timestamp) FROM transactions")
+            
+    render_system_status(pg_connected, tx_count, last_updated_ts)
     
     if not pg_connected:
         st.error("DATABASE CONNECTION\nUnable to connect to PostgreSQL.")
@@ -92,9 +93,9 @@ def render_overview():
     with c2:
         kpi_card("High Risk", metrics['high_risk'])
     with c3:
-        kpi_card("Total Value", metrics['total_value'], prefix="₹", format_str="{:,.2f}")
+        kpi_card("Total Value", metrics['total_value'], is_currency=True)
     with c4:
-        kpi_card("Average Value", metrics['avg_value'], prefix="₹", format_str="{:,.2f}")
+        kpi_card("Average Value", metrics['avg_value'], is_currency=True)
         
     st.markdown("<br/>", unsafe_allow_html=True)
     
@@ -124,7 +125,7 @@ def render_overview():
                 activity, 
                 x='time', 
                 y='tx_count',
-                labels={'time': 'Time', 'tx_count': 'Volume'}
+                labels={'time': 'Time', 'tx_count': 'Transactions per Minute'}
             )
             fig2.update_traces(line_color='#0f4c81')
             fig2.update_layout(margin=dict(t=0, b=0, l=0, r=0), height=300)
@@ -137,7 +138,8 @@ def render_overview():
     if not high_risk_tx.empty:
         # Format display dataframe
         display_df = high_risk_tx.copy()
-        display_df['amount'] = display_df['amount'].apply(lambda x: f"₹{x:,.2f}")
+        display_df['amount'] = display_df['amount'].apply(format_inr)
+        display_df['time'] = display_df['time'].apply(lambda x: format_timestamp(x, compact=True))
         display_df['final_risk_level'] = display_df['final_risk_level'].apply(lambda x: '🚨 HIGH')
         st.dataframe(display_df, use_container_width=True, hide_index=True)
     else:
@@ -166,10 +168,10 @@ def render_transactions():
     transactions = get_filtered_transactions(limit=50, filters=filters)
     
     if not transactions.empty:
-        # Display as a table with selectable rows via index if possible, but st.dataframe selection is limited in pure Streamlit unless using ag-grid.
-        # We'll use a simpler approach: list them, let user input an ID to inspect.
+        # Display as a table
         display_df = transactions[['transaction_id', 'transaction_timestamp', 'customer_id', 'merchant_id', 'amount', 'final_risk_level']].copy()
-        display_df['amount'] = display_df['amount'].apply(lambda x: f"₹{x:,.2f}")
+        display_df['amount'] = display_df['amount'].apply(format_inr)
+        display_df['transaction_timestamp'] = display_df['transaction_timestamp'].apply(lambda x: format_timestamp(x, compact=True))
         st.dataframe(display_df, use_container_width=True, hide_index=True)
         
         st.markdown("<h4>Transaction Investigation</h4>", unsafe_allow_html=True)
@@ -185,13 +187,14 @@ def render_transactions():
         st.info("No transactions match the criteria.")
 
 def render_transaction_detail(detail):
-    st.markdown(f"**Transaction:** `{detail['transaction_id']}` | **Time:** `{detail['transaction_timestamp']}`")
+    ts_formatted = format_timestamp(detail['transaction_timestamp'])
+    st.markdown(f"**Transaction:** `{detail['transaction_id']}` | **Time:** `{ts_formatted}`")
     
     c1, c2, c3 = st.columns(3)
     
     with c1:
         st.markdown("##### Core Details")
-        st.markdown(f"**Amount:** ₹{detail['amount']:,.2f}")
+        st.markdown(f"**Amount:** {format_inr(detail['amount'])}")
         st.markdown(f"**Type:** {detail['transaction_type']}")
         st.markdown(f"**Channel:** {detail['payment_channel']}")
         st.markdown(f"**City:** {detail['city']}")
@@ -244,8 +247,8 @@ def render_customers():
     customers = get_customer_metrics(search_id)
     if not customers.empty:
         display_df = customers.copy()
-        display_df['total_val'] = display_df['total_val'].apply(lambda x: f"₹{x:,.2f}")
-        display_df['avg_val'] = display_df['avg_val'].apply(lambda x: f"₹{x:,.2f}")
+        display_df['total_val'] = display_df['total_val'].apply(format_inr)
+        display_df['avg_val'] = display_df['avg_val'].apply(format_inr)
         st.dataframe(display_df, use_container_width=True, hide_index=True)
 
 def render_merchants():
@@ -255,7 +258,7 @@ def render_merchants():
     merchants = get_merchant_metrics(search_id)
     if not merchants.empty:
         display_df = merchants.copy()
-        display_df['total_val'] = display_df['total_val'].apply(lambda x: f"₹{x:,.2f}")
+        display_df['total_val'] = display_df['total_val'].apply(format_inr)
         st.dataframe(display_df, use_container_width=True, hide_index=True)
 
 if __name__ == "__main__":
