@@ -1,0 +1,501 @@
+merchant_id,merchant_name,merchant_category,city,country,risk_level,blacklisted
+MERCH_00001,Haynes Inc,Fuel,Delhi,India,LOW,False
+MERCH_00002,Singh-Dixon,Jewellery,Delhi,India,LOW,False
+MERCH_00003,Rivera Inc,Travel,Delhi,India,HIGH,False
+MERCH_00004,"Hernandez, Thomas and Hudson",Fuel,Mumbai,India,LOW,False
+MERCH_00005,Thomas-Avila,Electronics,Pune,India,LOW,False
+MERCH_00006,"Lee, Martinez and Woodard",ATM,Hyderabad,India,LOW,False
+MERCH_00007,Baker Inc,Fuel,Delhi,India,MEDIUM,False
+MERCH_00008,Clark-Smith,Electronics,Mumbai,India,LOW,False
+MERCH_00009,Caldwell-Lozano,Pharmacy,Delhi,India,MEDIUM,False
+MERCH_00010,Grant-Quinn,Electronics,Pune,India,LOW,False
+MERCH_00011,Bailey Ltd,Shopping,Pune,India,HIGH,False
+MERCH_00012,"Sims, Herring and Daniel",Hotel,Hyderabad,India,LOW,False
+MERCH_00013,Santiago-Sandoval,ATM,Mumbai,India,LOW,False
+MERCH_00014,Hunt-Wolfe,Shopping,Pune,India,MEDIUM,False
+MERCH_00015,Phillips Ltd,Fuel,Pune,India,MEDIUM,False
+MERCH_00016,Wilson Group,Shopping,Mumbai,India,LOW,False
+MERCH_00017,Evans-Burke,Pharmacy,Hyderabad,India,MEDIUM,False
+MERCH_00018,"Tucker, Carroll and Anderson",ATM,Mumbai,India,MEDIUM,False
+MERCH_00019,"Bradley, Walsh and Castro",Restaurant,Bangalore,India,LOW,False
+MERCH_00020,Williams-Lowe,Travel,Pune,India,LOW,False
+MERCH_00021,"Bowman, Savage and Williams",Fuel,Bangalore,India,MEDIUM,False
+MERCH_00022,Black-Martinez,Shopping,Mumbai,India,LOW,False
+MERCH_00023,Foster Group,Grocery,Hyderabad,India,LOW,False
+MERCH_00024,"Shaw, Phillips and Smith",Grocery,Pune,India,LOW,False
+MERCH_00025,Lawson-Miller,Hotel,Hyderabad,India,LOW,True
+MERCH_00026,"Clayton, Cross and Harris",Shopping,Delhi,India,MEDIUM,False
+MERCH_00027,"Carlson, Cooper and Fuller",Travel,Mumbai,India,LOW,False
+MERCH_00028,Lopez Group,Travel,Hyderabad,India,LOW,False
+MERCH_00029,Blackburn-Randolph,ATM,Pune,India,LOW,False
+MERCH_00030,Davis-Mitchell,Hotel,Delhi,India,LOW,False
+MERCH_00031,"Smith, Stafford and Howell",Pharmacy,Delhi,India,LOW,False
+MERCH_00032,"Sullivan, Price and Mcdaniel",Restaurant,Bangalore,India,MEDIUM,False
+MERCH_00033,Smith-Peters,Shopping,Delhi,India,LOW,False
+MERCH_00034,Roberson Group,Hotel,Mumbai,India,LOW,False
+MERCH_00035,"Fernandez, Guerra and Madden",Shopping,Pune,India,LOW,False
+MERCH_00036,Foster-Parks,Restaurant,Mumbai,India,HIGH,True
+MERCH_00037,Blankenship-Bennett,Restaurant,Delhi,India,HIGH,False
+MERCH_00038,Pruitt-Joseph,Electronics,Pune,India,MEDIUM,False
+MERCH_00039,"Brown, Brewer and Mckay",Pharmacy,Mumbai,India,MEDIUM,False
+MERCH_00040,"Wilson, Garrett and Martin",Fuel,Pune,India,LOW,False
+MERCH_00041,Adams and Sons,Shopping,Delhi,India,LOW,False
+MERCH_00042,"Wagner, Trujillo and Lopez",Travel,Bangalore,India,HIGH,False
+MERCH_00043,"Keller, Mitchell and Dixon",Fuel,Mumbai,India,LOW,False
+MERCH_00044,Garrison-Garcia,Jewellery,Delhi,India,MEDIUM,False
+MERCH_00045,Hayden Inc,Fuel,Mumbai,India,MEDIUM,False
+MERCH_00046,"Perkins, Carson and Pineda",Fuel,Bangalore,India,LOW,False
+MERCH_00047,Turner-Huerta,Electronics,Bangalore,India,HIGH,False
+MERCH_00048,Wilson Group,Fuel,Pune,India,LOW,False
+MERCH_00049,Walters-Garcia,Fuel,Pune,India,LOW,False
+MERCH_00050,Palmer PLC,Shopping,Pune,India,MEDIUM,False
+MERCH_00051,Rodriguez-Mendoza,Shopping,Mumbai,India,LOW,False
+MERCH_00052,"Wood, Anderson and Oconnor",Jewellery,Delhi,India,LOW,True
+MERCH_00053,"Keller, Fisher and Russell",Grocery,Delhi,India,HIGH,False
+MERCH_00054,Swanson Group,Electronics,Delhi,India,HIGH,False
+MERCH_00055,Hines Group,Electronics,Delhi,India,HIGH,False
+MERCH_00056,"Wells, Murphy and Myers",Travel,Delhi,India,LOW,False
+MERCH_00057,Cole PLC,Jewellery,Delhi,India,LOW,False
+MERCH_00058,"Haynes, Aguirre and Phillips",Hotel,Pune,India,LOW,True
+MERCH_00059,Levy Inc,Shopping,Delhi,India,HIGH,False
+MERCH_00060,Wood PLC,Fuel,Mumbai,India,LOW,False
+MERCH_00061,Morales-Carey,Electronics,Bangalore,India,HIGH,False
+MERCH_00062,"Moore, Shannon and Jones",Shopping,Hyderabad,India,LOW,False
+MERCH_00063,Christensen Group,Pharmacy,Hyderabad,India,LOW,False
+MERCH_00064,"Barron, Thomas and Gonzalez",Electronics,Hyderabad,India,HIGH,False
+MERCH_00065,"Massey, Johnston and Acevedo",Fuel,Delhi,India,HIGH,False
+MERCH_00066,"Wilkerson, Rodriguez and Rivers",Pharmacy,Hyderabad,India,LOW,False
+MERCH_00067,Miller LLC,Shopping,Delhi,India,LOW,False
+MERCH_00068,Wolfe LLC,Shopping,Hyderabad,India,LOW,False
+MERCH_00069,Perez-Hawkins,Electronics,Mumbai,India,LOW,False
+MERCH_00070,"Brown, Dunn and Howard",Hotel,Delhi,India,LOW,False
+MERCH_00071,"Burns, Duran and Glass",Hotel,Bangalore,India,LOW,False
+MERCH_00072,Townsend Ltd,Grocery,Hyderabad,India,MEDIUM,False
+MERCH_00073,Burke PLC,Electronics,Delhi,India,LOW,False
+MERCH_00074,"Davis, Lewis and Barron",ATM,Hyderabad,India,LOW,False
+MERCH_00075,Herring Inc,Hotel,Hyderabad,India,HIGH,False
+MERCH_00076,Higgins-Hall,Shopping,Mumbai,India,LOW,False
+MERCH_00077,"Holloway, Madden and Lawson",Jewellery,Delhi,India,MEDIUM,False
+MERCH_00078,Lee-Kelly,Hotel,Delhi,India,LOW,False
+MERCH_00079,Mckinney-Frank,Pharmacy,Hyderabad,India,LOW,False
+MERCH_00080,Carr and Sons,Electronics,Pune,India,LOW,False
+MERCH_00081,"Fletcher, Lee and Allen",Restaurant,Delhi,India,LOW,False
+MERCH_00082,"Melendez, Boyd and Erickson",Electronics,Delhi,India,MEDIUM,False
+MERCH_00083,Scott-Lopez,Fuel,Hyderabad,India,MEDIUM,False
+MERCH_00084,Diaz and Sons,Jewellery,Pune,India,LOW,True
+MERCH_00085,"Everett, Clark and Warren",ATM,Pune,India,LOW,False
+MERCH_00086,Underwood LLC,Hotel,Hyderabad,India,MEDIUM,False
+MERCH_00087,Flores-Cruz,Shopping,Hyderabad,India,LOW,False
+MERCH_00088,"Jennings, Morris and Johnson",Fuel,Hyderabad,India,MEDIUM,False
+MERCH_00089,"Summers, Russell and Wagner",Jewellery,Delhi,India,LOW,False
+MERCH_00090,Williams and Sons,Hotel,Delhi,India,LOW,False
+MERCH_00091,Henry-Ingram,Fuel,Pune,India,HIGH,False
+MERCH_00092,Ferguson Inc,Fuel,Hyderabad,India,LOW,False
+MERCH_00093,Howell-Rose,ATM,Pune,India,LOW,False
+MERCH_00094,Jones-Hurst,Shopping,Pune,India,MEDIUM,False
+MERCH_00095,"Shepherd, Mcdonald and Bird",ATM,Pune,India,HIGH,False
+MERCH_00096,Reilly LLC,Jewellery,Pune,India,LOW,False
+MERCH_00097,Lewis-Benson,Grocery,Delhi,India,LOW,False
+MERCH_00098,"Hughes, Adams and Brown",Fuel,Mumbai,India,LOW,False
+MERCH_00099,Morales-Martinez,Pharmacy,Hyderabad,India,MEDIUM,False
+MERCH_00100,Davis-Peters,Hotel,Pune,India,LOW,False
+MERCH_00101,"Underwood, Chan and Navarro",Restaurant,Mumbai,India,LOW,False
+MERCH_00102,"Burgess, Lin and Calhoun",ATM,Mumbai,India,MEDIUM,False
+MERCH_00103,Walters-James,Electronics,Hyderabad,India,LOW,False
+MERCH_00104,Phillips Group,Pharmacy,Hyderabad,India,LOW,False
+MERCH_00105,Scott PLC,Pharmacy,Mumbai,India,HIGH,False
+MERCH_00106,"Phillips, Ballard and Evans",Fuel,Mumbai,India,LOW,False
+MERCH_00107,Walker Inc,Pharmacy,Bangalore,India,MEDIUM,False
+MERCH_00108,Kirk and Sons,Travel,Bangalore,India,HIGH,True
+MERCH_00109,Garcia-Garcia,ATM,Hyderabad,India,LOW,False
+MERCH_00110,"Lewis, Chavez and Jones",Restaurant,Mumbai,India,MEDIUM,False
+MERCH_00111,Stewart Ltd,Shopping,Delhi,India,LOW,False
+MERCH_00112,Oneal-Mcintyre,Jewellery,Mumbai,India,MEDIUM,False
+MERCH_00113,Jefferson and Sons,Electronics,Pune,India,MEDIUM,False
+MERCH_00114,Hall Ltd,Shopping,Mumbai,India,MEDIUM,False
+MERCH_00115,"Smith, Clay and Robinson",ATM,Delhi,India,HIGH,False
+MERCH_00116,Lara-Anderson,Shopping,Mumbai,India,LOW,False
+MERCH_00117,"Sanders, Hernandez and Fry",Travel,Bangalore,India,MEDIUM,False
+MERCH_00118,"Holland, King and Rodriguez",Pharmacy,Delhi,India,LOW,False
+MERCH_00119,Davila Ltd,Jewellery,Pune,India,MEDIUM,False
+MERCH_00120,"Padilla, Burgess and Montoya",ATM,Pune,India,HIGH,False
+MERCH_00121,Odonnell-Hunt,Grocery,Delhi,India,MEDIUM,False
+MERCH_00122,"Stewart, Melton and Coleman",Jewellery,Mumbai,India,MEDIUM,False
+MERCH_00123,Bean-Davis,ATM,Mumbai,India,MEDIUM,False
+MERCH_00124,Pearson LLC,Grocery,Pune,India,MEDIUM,False
+MERCH_00125,"Ramirez, Ross and Bell",Pharmacy,Pune,India,LOW,False
+MERCH_00126,Norton-Bailey,Grocery,Pune,India,LOW,False
+MERCH_00127,Woods and Sons,Fuel,Pune,India,HIGH,False
+MERCH_00128,Lynch-Simpson,Electronics,Delhi,India,HIGH,False
+MERCH_00129,Carroll LLC,ATM,Hyderabad,India,MEDIUM,False
+MERCH_00130,"Clark, Watson and Clark",Jewellery,Hyderabad,India,LOW,False
+MERCH_00131,Vincent and Sons,Restaurant,Hyderabad,India,LOW,False
+MERCH_00132,Williams Group,Electronics,Bangalore,India,LOW,False
+MERCH_00133,Sharp Ltd,Travel,Hyderabad,India,HIGH,False
+MERCH_00134,Patterson PLC,Hotel,Mumbai,India,LOW,False
+MERCH_00135,Flores Inc,Travel,Hyderabad,India,LOW,False
+MERCH_00136,Murphy-Dougherty,Electronics,Pune,India,LOW,False
+MERCH_00137,"Mills, Garcia and Collins",ATM,Hyderabad,India,HIGH,False
+MERCH_00138,Gilmore-Cole,Fuel,Delhi,India,LOW,False
+MERCH_00139,Anderson-Gross,ATM,Hyderabad,India,LOW,False
+MERCH_00140,Garcia Ltd,Grocery,Pune,India,LOW,False
+MERCH_00141,"Eaton, Blair and Rodriguez",ATM,Delhi,India,LOW,False
+MERCH_00142,Chung-Miller,Fuel,Delhi,India,MEDIUM,False
+MERCH_00143,Adams Group,Shopping,Delhi,India,LOW,False
+MERCH_00144,"Carlson, Sims and Brown",Jewellery,Pune,India,LOW,False
+MERCH_00145,Wallace-Long,Travel,Bangalore,India,LOW,False
+MERCH_00146,Cooper-Smith,Electronics,Hyderabad,India,LOW,False
+MERCH_00147,Jones-Johnston,Fuel,Pune,India,LOW,True
+MERCH_00148,"Skinner, Valdez and Alexander",Jewellery,Bangalore,India,MEDIUM,False
+MERCH_00149,Lee PLC,Electronics,Delhi,India,LOW,False
+MERCH_00150,"Hayes, Martinez and Johnson",Electronics,Bangalore,India,LOW,False
+MERCH_00151,Williams PLC,Hotel,Bangalore,India,MEDIUM,False
+MERCH_00152,Garcia-Massey,Fuel,Delhi,India,LOW,False
+MERCH_00153,Cordova LLC,Grocery,Pune,India,LOW,False
+MERCH_00154,Floyd-Thompson,Travel,Pune,India,LOW,False
+MERCH_00155,Williams-Young,Electronics,Bangalore,India,LOW,False
+MERCH_00156,Wise-Anderson,Jewellery,Hyderabad,India,LOW,False
+MERCH_00157,Dixon Group,Grocery,Pune,India,LOW,False
+MERCH_00158,"Goodwin, Lawson and Williams",Grocery,Bangalore,India,HIGH,False
+MERCH_00159,"Wade, Walter and Morton",Jewellery,Hyderabad,India,LOW,False
+MERCH_00160,"Robinson, Day and Snyder",ATM,Pune,India,LOW,False
+MERCH_00161,Case Inc,Travel,Delhi,India,MEDIUM,True
+MERCH_00162,Meyer Inc,Shopping,Hyderabad,India,MEDIUM,False
+MERCH_00163,"Barnett, Oconnor and Lane",Pharmacy,Pune,India,LOW,False
+MERCH_00164,Baker-Burch,Jewellery,Pune,India,LOW,False
+MERCH_00165,Cordova Inc,Pharmacy,Delhi,India,MEDIUM,False
+MERCH_00166,"Sparks, Smith and Krause",Electronics,Hyderabad,India,MEDIUM,False
+MERCH_00167,Smith Inc,Grocery,Hyderabad,India,LOW,False
+MERCH_00168,Rodriguez PLC,Pharmacy,Delhi,India,LOW,False
+MERCH_00169,Sanchez-Mathis,Jewellery,Pune,India,LOW,False
+MERCH_00170,"Butler, Valdez and Cisneros",Fuel,Hyderabad,India,MEDIUM,False
+MERCH_00171,Williams LLC,Shopping,Mumbai,India,MEDIUM,False
+MERCH_00172,Martinez Group,Hotel,Hyderabad,India,MEDIUM,False
+MERCH_00173,Oliver and Sons,Hotel,Delhi,India,LOW,False
+MERCH_00174,Johnson-Miller,Travel,Delhi,India,HIGH,False
+MERCH_00175,Nelson Group,Restaurant,Pune,India,MEDIUM,False
+MERCH_00176,"Elliott, Scott and Shelton",Electronics,Pune,India,LOW,False
+MERCH_00177,Williams and Sons,Hotel,Pune,India,HIGH,False
+MERCH_00178,Martin-Phillips,Hotel,Bangalore,India,MEDIUM,True
+MERCH_00179,Kelly PLC,Hotel,Hyderabad,India,LOW,False
+MERCH_00180,Knox Ltd,Travel,Hyderabad,India,MEDIUM,False
+MERCH_00181,"Gutierrez, Price and Santiago",Pharmacy,Hyderabad,India,LOW,False
+MERCH_00182,Clements LLC,Travel,Bangalore,India,HIGH,False
+MERCH_00183,"Cole, Nelson and Garcia",Grocery,Delhi,India,LOW,False
+MERCH_00184,"Cummings, Gallegos and Miller",Electronics,Mumbai,India,LOW,False
+MERCH_00185,Bishop-Mitchell,Electronics,Delhi,India,HIGH,False
+MERCH_00186,Hanson Group,ATM,Pune,India,LOW,False
+MERCH_00187,"Hayes, Young and Ramirez",Hotel,Pune,India,LOW,False
+MERCH_00188,Clayton PLC,Shopping,Pune,India,LOW,False
+MERCH_00189,"Dixon, Campbell and Lin",Hotel,Mumbai,India,MEDIUM,False
+MERCH_00190,"Obrien, Williams and Gutierrez",Travel,Bangalore,India,MEDIUM,False
+MERCH_00191,Franco Ltd,Grocery,Delhi,India,LOW,False
+MERCH_00192,"Walters, Smith and Collins",Restaurant,Pune,India,LOW,False
+MERCH_00193,Dennis Group,Electronics,Hyderabad,India,LOW,False
+MERCH_00194,Hernandez LLC,Hotel,Pune,India,LOW,False
+MERCH_00195,"Peterson, Rowe and Callahan",Hotel,Pune,India,LOW,False
+MERCH_00196,Smith-Marks,Pharmacy,Bangalore,India,LOW,False
+MERCH_00197,Collins-Lester,Jewellery,Mumbai,India,LOW,False
+MERCH_00198,Johnson Ltd,Grocery,Bangalore,India,LOW,False
+MERCH_00199,"Thompson, Mckenzie and Michael",Travel,Pune,India,LOW,False
+MERCH_00200,Lopez LLC,ATM,Bangalore,India,LOW,False
+MERCH_00201,Carey-Alexander,Restaurant,Mumbai,India,LOW,False
+MERCH_00202,Austin-Crawford,Travel,Mumbai,India,LOW,False
+MERCH_00203,"Alexander, Johnston and Ball",Jewellery,Bangalore,India,LOW,False
+MERCH_00204,Davis PLC,Travel,Delhi,India,LOW,False
+MERCH_00205,"Castillo, Hobbs and Griffin",Fuel,Hyderabad,India,MEDIUM,False
+MERCH_00206,"Davis, Fuller and Hawkins",Grocery,Delhi,India,MEDIUM,False
+MERCH_00207,King Ltd,Travel,Bangalore,India,HIGH,False
+MERCH_00208,Vega Ltd,ATM,Bangalore,India,LOW,False
+MERCH_00209,Edwards-Johnson,Shopping,Hyderabad,India,MEDIUM,False
+MERCH_00210,"Adkins, Woods and Martinez",Grocery,Delhi,India,MEDIUM,False
+MERCH_00211,Clark-Gibbs,Hotel,Mumbai,India,MEDIUM,False
+MERCH_00212,"Smith, Rowe and Thomas",Electronics,Mumbai,India,MEDIUM,False
+MERCH_00213,Martin and Sons,Jewellery,Mumbai,India,LOW,True
+MERCH_00214,Davis Group,Jewellery,Pune,India,LOW,False
+MERCH_00215,James-Hall,Restaurant,Delhi,India,LOW,False
+MERCH_00216,Barry LLC,Grocery,Hyderabad,India,LOW,False
+MERCH_00217,"Evans, Valdez and Keller",Fuel,Pune,India,MEDIUM,False
+MERCH_00218,"Smith, King and Brady",Hotel,Hyderabad,India,LOW,False
+MERCH_00219,Anderson-Peterson,Electronics,Bangalore,India,HIGH,True
+MERCH_00220,Cook-King,Pharmacy,Bangalore,India,MEDIUM,False
+MERCH_00221,Hammond-Lynch,Shopping,Bangalore,India,MEDIUM,False
+MERCH_00222,Thomas and Sons,Electronics,Pune,India,MEDIUM,False
+MERCH_00223,Taylor Inc,Pharmacy,Pune,India,MEDIUM,False
+MERCH_00224,Chandler-Johnson,Shopping,Mumbai,India,LOW,False
+MERCH_00225,"Foster, Ward and Smith",Restaurant,Pune,India,LOW,False
+MERCH_00226,"Hernandez, Ramos and Potter",Jewellery,Mumbai,India,MEDIUM,False
+MERCH_00227,Mendoza Ltd,Travel,Pune,India,MEDIUM,True
+MERCH_00228,Ballard PLC,Shopping,Mumbai,India,LOW,False
+MERCH_00229,Warren PLC,Jewellery,Bangalore,India,MEDIUM,False
+MERCH_00230,Fields LLC,Restaurant,Pune,India,LOW,False
+MERCH_00231,Ramirez Ltd,Electronics,Bangalore,India,LOW,False
+MERCH_00232,"Nelson, Smith and Turner",Hotel,Pune,India,LOW,False
+MERCH_00233,"Adams, Myers and Brown",Fuel,Hyderabad,India,MEDIUM,False
+MERCH_00234,Conway-Jones,Pharmacy,Bangalore,India,HIGH,False
+MERCH_00235,Ross-Anderson,Pharmacy,Pune,India,LOW,False
+MERCH_00236,Garcia-Lawson,Travel,Pune,India,MEDIUM,False
+MERCH_00237,Alvarez-Reed,Electronics,Mumbai,India,LOW,False
+MERCH_00238,"Salazar, Johnson and Allen",Pharmacy,Delhi,India,LOW,False
+MERCH_00239,Richardson PLC,Travel,Pune,India,LOW,False
+MERCH_00240,"Kramer, Tucker and Johnson",Pharmacy,Mumbai,India,MEDIUM,False
+MERCH_00241,"Henderson, Henderson and Hendrix",Jewellery,Delhi,India,MEDIUM,False
+MERCH_00242,Lopez-White,ATM,Bangalore,India,LOW,False
+MERCH_00243,May and Sons,ATM,Delhi,India,MEDIUM,False
+MERCH_00244,"White, Lynn and Wright",Electronics,Delhi,India,MEDIUM,False
+MERCH_00245,"Rogers, Delacruz and Stephens",Shopping,Mumbai,India,MEDIUM,False
+MERCH_00246,Collier and Sons,Shopping,Bangalore,India,LOW,False
+MERCH_00247,Stanley-Williams,Hotel,Delhi,India,LOW,False
+MERCH_00248,"Anderson, Brown and Watson",Jewellery,Mumbai,India,LOW,False
+MERCH_00249,"Lopez, Black and Cook",Jewellery,Hyderabad,India,LOW,False
+MERCH_00250,Kim-Collins,Grocery,Delhi,India,HIGH,False
+MERCH_00251,"Hall, Huynh and Rivera",ATM,Delhi,India,MEDIUM,False
+MERCH_00252,Carrillo LLC,Travel,Mumbai,India,LOW,False
+MERCH_00253,"West, Sanchez and Smith",Travel,Pune,India,HIGH,False
+MERCH_00254,Edwards-Roberts,Jewellery,Delhi,India,LOW,False
+MERCH_00255,"Mitchell, Bailey and Black",Fuel,Delhi,India,LOW,False
+MERCH_00256,Wilson Inc,Shopping,Pune,India,LOW,False
+MERCH_00257,Scott Inc,Fuel,Hyderabad,India,HIGH,False
+MERCH_00258,Knight-Casey,Shopping,Bangalore,India,LOW,False
+MERCH_00259,Levy Ltd,Grocery,Delhi,India,LOW,False
+MERCH_00260,Wallace LLC,Grocery,Delhi,India,LOW,False
+MERCH_00261,Arnold-Taylor,Travel,Bangalore,India,LOW,False
+MERCH_00262,"Jennings, Hendrix and Phillips",Electronics,Bangalore,India,LOW,False
+MERCH_00263,Drake-Simmons,Travel,Pune,India,LOW,False
+MERCH_00264,Davis Group,Electronics,Pune,India,MEDIUM,False
+MERCH_00265,"Matthews, Wong and Ingram",Shopping,Delhi,India,LOW,False
+MERCH_00266,Thomas PLC,Fuel,Delhi,India,MEDIUM,False
+MERCH_00267,"Schultz, King and Wade",Jewellery,Pune,India,LOW,False
+MERCH_00268,"Glover, Thomas and Wright",Restaurant,Delhi,India,LOW,False
+MERCH_00269,"Lindsey, Davis and Hoffman",Pharmacy,Bangalore,India,LOW,False
+MERCH_00270,Green PLC,Pharmacy,Pune,India,LOW,False
+MERCH_00271,Webb Group,ATM,Mumbai,India,MEDIUM,False
+MERCH_00272,Rodriguez Inc,Fuel,Bangalore,India,LOW,False
+MERCH_00273,"Bowman, Horn and King",Pharmacy,Hyderabad,India,MEDIUM,False
+MERCH_00274,Vasquez-Johnson,Restaurant,Pune,India,MEDIUM,False
+MERCH_00275,Bishop Ltd,Fuel,Pune,India,HIGH,False
+MERCH_00276,Shaw-Liu,Pharmacy,Bangalore,India,LOW,False
+MERCH_00277,Thomas LLC,Shopping,Pune,India,LOW,False
+MERCH_00278,Garcia Ltd,Pharmacy,Bangalore,India,LOW,False
+MERCH_00279,Miller-Best,Grocery,Bangalore,India,MEDIUM,False
+MERCH_00280,Solis PLC,Restaurant,Pune,India,MEDIUM,False
+MERCH_00281,Singh-Strickland,Electronics,Mumbai,India,LOW,False
+MERCH_00282,King LLC,Grocery,Hyderabad,India,LOW,True
+MERCH_00283,Roberts LLC,Jewellery,Delhi,India,MEDIUM,False
+MERCH_00284,"Kirby, Ross and Lowe",Restaurant,Pune,India,LOW,False
+MERCH_00285,Perez-Jones,Grocery,Delhi,India,LOW,False
+MERCH_00286,Garcia Group,Grocery,Bangalore,India,LOW,False
+MERCH_00287,Wagner-Jenkins,Shopping,Pune,India,LOW,True
+MERCH_00288,Rhodes-Meyer,Electronics,Hyderabad,India,LOW,False
+MERCH_00289,Rodriguez Group,Travel,Delhi,India,LOW,False
+MERCH_00290,Henson and Sons,Hotel,Mumbai,India,LOW,False
+MERCH_00291,Allen-Gordon,Pharmacy,Delhi,India,LOW,False
+MERCH_00292,Bennett and Sons,Restaurant,Hyderabad,India,MEDIUM,False
+MERCH_00293,Craig-Adams,Electronics,Hyderabad,India,LOW,False
+MERCH_00294,"Cortez, Robertson and Ford",Jewellery,Bangalore,India,LOW,False
+MERCH_00295,Cruz LLC,Restaurant,Pune,India,LOW,False
+MERCH_00296,Long LLC,Pharmacy,Hyderabad,India,LOW,False
+MERCH_00297,"Miller, Cox and Ortiz",Grocery,Mumbai,India,HIGH,False
+MERCH_00298,"Miller, Yates and Hernandez",Restaurant,Bangalore,India,HIGH,False
+MERCH_00299,"Clark, Middleton and Taylor",Pharmacy,Hyderabad,India,LOW,False
+MERCH_00300,Allen PLC,Fuel,Hyderabad,India,LOW,False
+MERCH_00301,Fisher and Sons,Pharmacy,Delhi,India,MEDIUM,False
+MERCH_00302,Mccoy-Webster,Pharmacy,Mumbai,India,LOW,False
+MERCH_00303,Lambert LLC,Shopping,Bangalore,India,LOW,False
+MERCH_00304,"Franco, Vargas and Harris",Travel,Bangalore,India,LOW,True
+MERCH_00305,"Lee, Nguyen and Torres",Travel,Mumbai,India,LOW,True
+MERCH_00306,"Chavez, Chang and Murphy",Hotel,Pune,India,MEDIUM,False
+MERCH_00307,"Miller, Bailey and Williams",Restaurant,Mumbai,India,MEDIUM,False
+MERCH_00308,"Mcclure, Roth and Dorsey",Electronics,Pune,India,LOW,False
+MERCH_00309,Carlson-Cooper,Restaurant,Hyderabad,India,LOW,False
+MERCH_00310,Graves-Rodriguez,Electronics,Bangalore,India,MEDIUM,False
+MERCH_00311,"Singh, Baker and Jones",Grocery,Hyderabad,India,MEDIUM,False
+MERCH_00312,Owens-Mcdonald,Travel,Bangalore,India,LOW,False
+MERCH_00313,Chapman PLC,Pharmacy,Hyderabad,India,LOW,False
+MERCH_00314,Scott-Higgins,Hotel,Mumbai,India,LOW,False
+MERCH_00315,"Carlson, Warren and Smith",Hotel,Pune,India,MEDIUM,False
+MERCH_00316,Lewis Ltd,Grocery,Mumbai,India,MEDIUM,False
+MERCH_00317,"Foster, Parsons and Nguyen",Jewellery,Hyderabad,India,LOW,False
+MERCH_00318,Arnold-Jimenez,Travel,Hyderabad,India,MEDIUM,False
+MERCH_00319,Edwards-Jackson,ATM,Hyderabad,India,LOW,False
+MERCH_00320,Jordan Inc,Travel,Bangalore,India,LOW,False
+MERCH_00321,Burns PLC,Travel,Pune,India,MEDIUM,False
+MERCH_00322,White-Spencer,Travel,Hyderabad,India,HIGH,False
+MERCH_00323,Gonzalez-Goodwin,Grocery,Mumbai,India,LOW,False
+MERCH_00324,"Russell, Kaiser and Smith",Pharmacy,Delhi,India,MEDIUM,False
+MERCH_00325,"Thomas, Anderson and Austin",Grocery,Mumbai,India,MEDIUM,False
+MERCH_00326,Burns-Ellis,Shopping,Pune,India,MEDIUM,False
+MERCH_00327,Thornton Ltd,Hotel,Pune,India,LOW,False
+MERCH_00328,Becker Group,Hotel,Hyderabad,India,LOW,True
+MERCH_00329,White-Mills,ATM,Hyderabad,India,MEDIUM,False
+MERCH_00330,"Kirby, Vasquez and Newman",Pharmacy,Mumbai,India,MEDIUM,False
+MERCH_00331,Hall-Martin,Shopping,Delhi,India,LOW,False
+MERCH_00332,Ruiz-Brown,Fuel,Bangalore,India,LOW,False
+MERCH_00333,Hines Inc,Grocery,Bangalore,India,LOW,True
+MERCH_00334,Martin Inc,Travel,Delhi,India,MEDIUM,True
+MERCH_00335,"Hicks, Wilson and Simmons",ATM,Delhi,India,LOW,False
+MERCH_00336,Martinez Ltd,Travel,Hyderabad,India,LOW,False
+MERCH_00337,Perry-Mills,Fuel,Hyderabad,India,LOW,False
+MERCH_00338,Reynolds PLC,Grocery,Bangalore,India,LOW,False
+MERCH_00339,"Fields, Mosley and Leonard",Electronics,Mumbai,India,LOW,False
+MERCH_00340,Burke LLC,Grocery,Pune,India,MEDIUM,False
+MERCH_00341,"Ramirez, Levy and Terry",ATM,Mumbai,India,LOW,False
+MERCH_00342,Craig PLC,Hotel,Pune,India,MEDIUM,False
+MERCH_00343,Carr Ltd,Fuel,Mumbai,India,LOW,False
+MERCH_00344,Mccormick-Austin,Electronics,Hyderabad,India,MEDIUM,False
+MERCH_00345,Herrera Group,Grocery,Mumbai,India,LOW,False
+MERCH_00346,Padilla-Morrow,Fuel,Hyderabad,India,MEDIUM,False
+MERCH_00347,"Wiggins, Bryan and Werner",Grocery,Bangalore,India,LOW,False
+MERCH_00348,"Armstrong, Shepherd and Gray",Travel,Hyderabad,India,LOW,False
+MERCH_00349,"Haley, Green and Sutton",Grocery,Pune,India,LOW,False
+MERCH_00350,"Zamora, Butler and Graham",Shopping,Bangalore,India,HIGH,False
+MERCH_00351,"White, Jefferson and Phillips",Fuel,Delhi,India,LOW,False
+MERCH_00352,Jones-Rogers,Travel,Bangalore,India,MEDIUM,False
+MERCH_00353,"Mayer, Bryan and Cochran",Hotel,Bangalore,India,LOW,False
+MERCH_00354,Brown-Thomas,Grocery,Mumbai,India,MEDIUM,False
+MERCH_00355,"Scott, Vasquez and Scott",Pharmacy,Mumbai,India,LOW,False
+MERCH_00356,"Carpenter, Robinson and Lopez",ATM,Hyderabad,India,LOW,False
+MERCH_00357,Peters LLC,Hotel,Delhi,India,LOW,False
+MERCH_00358,Moon-Williams,Restaurant,Bangalore,India,LOW,False
+MERCH_00359,Perez-Smith,Hotel,Hyderabad,India,HIGH,False
+MERCH_00360,"Gibbs, Anderson and Frazier",Jewellery,Pune,India,LOW,False
+MERCH_00361,Hall-Williams,Jewellery,Mumbai,India,LOW,False
+MERCH_00362,Carroll Group,Jewellery,Mumbai,India,LOW,False
+MERCH_00363,Thompson Ltd,Jewellery,Hyderabad,India,LOW,False
+MERCH_00364,Rios PLC,Jewellery,Bangalore,India,LOW,False
+MERCH_00365,"Wood, Pacheco and Chavez",Electronics,Pune,India,LOW,True
+MERCH_00366,Clarke LLC,Fuel,Bangalore,India,LOW,True
+MERCH_00367,"Barker, Gibson and Clarke",Jewellery,Bangalore,India,LOW,True
+MERCH_00368,"Gregory, Reed and Roman",Grocery,Pune,India,LOW,False
+MERCH_00369,Mendoza LLC,Travel,Pune,India,LOW,False
+MERCH_00370,"Glenn, Riley and Avila",Restaurant,Delhi,India,HIGH,False
+MERCH_00371,Macias-Gordon,Electronics,Mumbai,India,HIGH,False
+MERCH_00372,Meyer-Johnson,Jewellery,Mumbai,India,MEDIUM,False
+MERCH_00373,Brown-Hernandez,Fuel,Delhi,India,LOW,False
+MERCH_00374,Decker Group,Hotel,Bangalore,India,HIGH,False
+MERCH_00375,Garrett-Cox,Travel,Mumbai,India,LOW,False
+MERCH_00376,Hartman Inc,Travel,Hyderabad,India,HIGH,False
+MERCH_00377,Turner Group,Fuel,Mumbai,India,LOW,False
+MERCH_00378,Miller-Garcia,Electronics,Pune,India,LOW,False
+MERCH_00379,Taylor Group,Restaurant,Delhi,India,MEDIUM,False
+MERCH_00380,Rice-Mendoza,ATM,Hyderabad,India,LOW,False
+MERCH_00381,Martinez-Mckenzie,Shopping,Mumbai,India,LOW,False
+MERCH_00382,Wilson and Sons,Jewellery,Bangalore,India,LOW,False
+MERCH_00383,Gamble-Pham,Electronics,Mumbai,India,HIGH,False
+MERCH_00384,"Martin, Chen and Pittman",Pharmacy,Pune,India,MEDIUM,False
+MERCH_00385,Snyder LLC,Shopping,Delhi,India,LOW,False
+MERCH_00386,"Dennis, Davis and Baker",Jewellery,Mumbai,India,LOW,True
+MERCH_00387,Hess Ltd,Travel,Bangalore,India,MEDIUM,False
+MERCH_00388,"Horne, Lara and Vasquez",Restaurant,Bangalore,India,HIGH,False
+MERCH_00389,Lewis-Soto,Hotel,Hyderabad,India,MEDIUM,False
+MERCH_00390,Rose-Mata,Fuel,Hyderabad,India,LOW,False
+MERCH_00391,Ray-Roach,Restaurant,Hyderabad,India,LOW,False
+MERCH_00392,"Lopez, Jones and Wood",Electronics,Pune,India,LOW,False
+MERCH_00393,Guerra LLC,Electronics,Delhi,India,LOW,False
+MERCH_00394,"Michael, Jones and Evans",Restaurant,Delhi,India,LOW,False
+MERCH_00395,"Griffith, Johnson and Lee",Travel,Delhi,India,LOW,False
+MERCH_00396,Lawson-Williams,Restaurant,Delhi,India,LOW,False
+MERCH_00397,Kent-Sanchez,Fuel,Bangalore,India,MEDIUM,False
+MERCH_00398,Santana PLC,Electronics,Hyderabad,India,LOW,False
+MERCH_00399,Brooks-Cisneros,Electronics,Hyderabad,India,MEDIUM,False
+MERCH_00400,"Ward, Odom and Murray",ATM,Mumbai,India,LOW,False
+MERCH_00401,Bryan LLC,Grocery,Mumbai,India,LOW,False
+MERCH_00402,"Wood, Wong and Diaz",Travel,Bangalore,India,LOW,False
+MERCH_00403,Lam Inc,Shopping,Bangalore,India,LOW,False
+MERCH_00404,"Jensen, Wilson and Hanson",Hotel,Mumbai,India,LOW,False
+MERCH_00405,"King, Reed and Wyatt",Pharmacy,Pune,India,MEDIUM,False
+MERCH_00406,Patel-Martinez,Travel,Bangalore,India,LOW,False
+MERCH_00407,Cabrera-Spence,ATM,Hyderabad,India,MEDIUM,False
+MERCH_00408,Cook LLC,Shopping,Pune,India,HIGH,False
+MERCH_00409,Gray-Clark,Restaurant,Hyderabad,India,LOW,False
+MERCH_00410,"Sanchez, Hampton and Hawkins",ATM,Bangalore,India,LOW,False
+MERCH_00411,"Koch, Davis and Nelson",ATM,Pune,India,LOW,False
+MERCH_00412,Kramer LLC,ATM,Bangalore,India,HIGH,False
+MERCH_00413,"Simon, Bennett and Ward",Jewellery,Hyderabad,India,LOW,False
+MERCH_00414,"Williams, Lee and Wagner",Jewellery,Delhi,India,MEDIUM,False
+MERCH_00415,Williams-Mckenzie,Restaurant,Pune,India,LOW,True
+MERCH_00416,Richardson-Alvarez,Shopping,Pune,India,LOW,False
+MERCH_00417,Lopez-Perez,ATM,Mumbai,India,MEDIUM,False
+MERCH_00418,Fleming-Wright,Hotel,Mumbai,India,LOW,False
+MERCH_00419,Cooper PLC,Hotel,Mumbai,India,LOW,False
+MERCH_00420,Taylor-Golden,Restaurant,Mumbai,India,LOW,False
+MERCH_00421,Benton-Escobar,Grocery,Hyderabad,India,LOW,False
+MERCH_00422,Morrison-Hill,Restaurant,Bangalore,India,LOW,False
+MERCH_00423,Rogers-Hunter,Fuel,Bangalore,India,LOW,False
+MERCH_00424,"Lin, Smith and Miller",ATM,Pune,India,LOW,False
+MERCH_00425,"Watson, Robinson and Juarez",Restaurant,Mumbai,India,LOW,False
+MERCH_00426,Stewart LLC,ATM,Delhi,India,MEDIUM,False
+MERCH_00427,"Williams, Moon and Davies",Hotel,Hyderabad,India,LOW,False
+MERCH_00428,Roberts Inc,Pharmacy,Mumbai,India,MEDIUM,False
+MERCH_00429,Ramirez Inc,Restaurant,Delhi,India,MEDIUM,False
+MERCH_00430,"Cummings, Landry and Brewer",ATM,Mumbai,India,LOW,False
+MERCH_00431,Craig Group,Shopping,Mumbai,India,MEDIUM,False
+MERCH_00432,Cochran and Sons,Travel,Delhi,India,LOW,False
+MERCH_00433,"Thomas, Pearson and Leonard",Restaurant,Hyderabad,India,LOW,False
+MERCH_00434,Anthony-Payne,Grocery,Mumbai,India,LOW,False
+MERCH_00435,"Sullivan, Ortiz and Martinez",Shopping,Delhi,India,LOW,False
+MERCH_00436,Lawson-Hendricks,Shopping,Delhi,India,LOW,False
+MERCH_00437,"Harris, Thornton and Cox",Travel,Pune,India,LOW,False
+MERCH_00438,"Patel, Liu and Garcia",Restaurant,Delhi,India,LOW,False
+MERCH_00439,Smith-Bautista,Shopping,Hyderabad,India,LOW,False
+MERCH_00440,"Lewis, Ingram and Higgins",Electronics,Delhi,India,LOW,False
+MERCH_00441,"Jones, Brock and Guerra",Restaurant,Mumbai,India,LOW,False
+MERCH_00442,"Ritter, Welch and Brown",Pharmacy,Delhi,India,LOW,False
+MERCH_00443,Ballard-Russell,Jewellery,Mumbai,India,MEDIUM,False
+MERCH_00444,Vega PLC,Electronics,Hyderabad,India,LOW,False
+MERCH_00445,Anderson-Scott,Fuel,Pune,India,MEDIUM,False
+MERCH_00446,Randolph-Davis,Fuel,Mumbai,India,HIGH,False
+MERCH_00447,Campbell PLC,Travel,Mumbai,India,MEDIUM,False
+MERCH_00448,Stein and Sons,Grocery,Bangalore,India,LOW,False
+MERCH_00449,Alexander Inc,Electronics,Pune,India,LOW,False
+MERCH_00450,Gibson Inc,ATM,Delhi,India,LOW,False
+MERCH_00451,Vasquez-Huffman,Restaurant,Hyderabad,India,MEDIUM,False
+MERCH_00452,Bell and Sons,Electronics,Delhi,India,LOW,False
+MERCH_00453,"Diaz, Smith and Griffin",Pharmacy,Bangalore,India,MEDIUM,False
+MERCH_00454,"Perez, Lee and Roberts",Electronics,Delhi,India,MEDIUM,False
+MERCH_00455,Shepherd-Lopez,Grocery,Hyderabad,India,LOW,True
+MERCH_00456,Cooper Inc,Fuel,Bangalore,India,LOW,False
+MERCH_00457,"Pacheco, Cunningham and Burns",Fuel,Mumbai,India,LOW,False
+MERCH_00458,"Edwards, Chavez and Gross",Hotel,Mumbai,India,LOW,False
+MERCH_00459,Waters and Sons,Fuel,Hyderabad,India,LOW,False
+MERCH_00460,"Price, Foley and Osborne",Hotel,Pune,India,MEDIUM,False
+MERCH_00461,Cortez Inc,Shopping,Hyderabad,India,LOW,False
+MERCH_00462,Rodriguez-Taylor,Electronics,Pune,India,MEDIUM,False
+MERCH_00463,Spence Group,Electronics,Bangalore,India,LOW,False
+MERCH_00464,Kirby-Thomas,Fuel,Bangalore,India,LOW,False
+MERCH_00465,Pham-Wade,Hotel,Hyderabad,India,HIGH,False
+MERCH_00466,Blake LLC,Travel,Bangalore,India,LOW,False
+MERCH_00467,Velez LLC,Restaurant,Mumbai,India,LOW,False
+MERCH_00468,Long Inc,Electronics,Pune,India,LOW,False
+MERCH_00469,Bailey-Contreras,Restaurant,Bangalore,India,MEDIUM,False
+MERCH_00470,Erickson-Newman,ATM,Mumbai,India,LOW,False
+MERCH_00471,Chandler and Sons,Grocery,Hyderabad,India,MEDIUM,False
+MERCH_00472,Alvarado-Harvey,Travel,Mumbai,India,LOW,False
+MERCH_00473,Miller-Duran,Shopping,Pune,India,HIGH,True
+MERCH_00474,Williams-Figueroa,Hotel,Mumbai,India,LOW,False
+MERCH_00475,Davis-Brown,Grocery,Mumbai,India,LOW,False
+MERCH_00476,"Anderson, Burke and Mcintosh",Hotel,Bangalore,India,LOW,False
+MERCH_00477,James Group,Travel,Pune,India,LOW,False
+MERCH_00478,Larsen Group,Travel,Pune,India,LOW,False
+MERCH_00479,Paul-Klein,ATM,Delhi,India,MEDIUM,False
+MERCH_00480,Simmons Group,Hotel,Bangalore,India,LOW,False
+MERCH_00481,Briggs Inc,Shopping,Hyderabad,India,LOW,False
+MERCH_00482,Orr and Sons,Travel,Delhi,India,LOW,False
+MERCH_00483,Olsen-Ayala,Electronics,Pune,India,MEDIUM,False
+MERCH_00484,"Duarte, Nguyen and Ortiz",Electronics,Mumbai,India,MEDIUM,False
+MERCH_00485,Decker-Murphy,Pharmacy,Delhi,India,LOW,False
+MERCH_00486,Martinez LLC,Fuel,Bangalore,India,LOW,False
+MERCH_00487,"Gray, Wright and Brown",Pharmacy,Bangalore,India,LOW,False
+MERCH_00488,West-Pearson,ATM,Bangalore,India,LOW,False
+MERCH_00489,Henderson-White,Jewellery,Bangalore,India,LOW,False
+MERCH_00490,Miller-Santana,Hotel,Pune,India,LOW,False
+MERCH_00491,Olsen LLC,Hotel,Hyderabad,India,LOW,False
+MERCH_00492,"Gordon, Herrera and Johnson",Electronics,Mumbai,India,MEDIUM,False
+MERCH_00493,"Castillo, Keith and Morrow",Shopping,Bangalore,India,LOW,False
+MERCH_00494,"Murphy, Morris and Jones",Jewellery,Delhi,India,LOW,False
+MERCH_00495,Mcneil-Martinez,Travel,Mumbai,India,LOW,False
+MERCH_00496,"Rivas, Wall and Watson",Restaurant,Hyderabad,India,LOW,False
+MERCH_00497,"Clarke, Sullivan and Beltran",Pharmacy,Mumbai,India,LOW,False
+MERCH_00498,"Beck, Martin and Jones",Grocery,Delhi,India,LOW,False
+MERCH_00499,Flores and Sons,Jewellery,Delhi,India,HIGH,False
+MERCH_00500,"White, Holland and Davis",Jewellery,Mumbai,India,MEDIUM,False
